@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chess Board</title>
+</head>
+<body>
+
+<div id="board"></div>
+
+<script>
+
+let board = document.getElementById("board");
+
+board.style.display = "grid";
+board.style.gridTemplateColumns = "repeat(8, 60px)";
+board.style.gridTemplateRows = "repeat(8, 60px)";
+board.style.width = "480px";
+board.style.margin = "20px auto";
+board.style.border = "3px solid black";
+
+for(let row = 0; row < 8; row++)
+{
+    for(let col = 0; col < 8; col++)
+    {
+        let cell = document.createElement("div");
+
+        cell.style.width = "60px";
+        cell.style.height = "60px";
+
+        if((row + col) % 2 == 0)
+        {
+            cell.style.backgroundColor = "white";
+        }
+        else
+        {
+            cell.style.backgroundColor = "black";
+        }
+
+        board.appendChild(cell);
+    }
+}
+
+</script>
+
+</body>
+</html>

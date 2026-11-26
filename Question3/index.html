@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 3px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: white;
+            width: 500px;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px gray;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>To-Do List</h1>
+
+<input type="text" id="taskInput" placeholder="Enter Task">
+<button onclick="addTask()">Add Task</button>
+
+<ul id="taskList"></ul>
+
+<script>
+
+function addTask() {
+
+    let task = document.getElementById("taskInput").value;
+
+    if(task == ""){
+        alert("Please Enter Task");
+        return;
+    }
+
+    let li = document.createElement("li");
+
+    li.innerHTML = `
+        <input type="checkbox" onchange="markDone(this)">
+        <span>${task}</span>
+
+        <button onclick="moveUp(this)">⬆ Up</button>
+        <button onclick="moveDown(this)">⬇ Down</button>
+        <button onclick="deleteTask(this)">❌ Delete</button>
+    `;
+
+    document.getElementById("taskList").appendChild(li);
+
+    document.getElementById("taskInput").value = "";
+}
+
+function deleteTask(button){
+    button.parentElement.remove();
+}
+
+function moveUp(button){
+    let item = button.parentElement;
+    let previous = item.previousElementSibling;
+
+    if(previous){
+        item.parentNode.insertBefore(item, previous);
+    }
+}
+
+function moveDown(button){
+    let item = button.parentElement;
+    let next = item.nextElementSibling;
+
+    if(next){
+        item.parentNode.insertBefore(next, item);
+    }
+}
+
+function markDone(checkbox){
+    let text = checkbox.nextElementSibling;
+    text.classList.toggle("completed");
+}
+
+</script>
+
+</body>
+</html>
