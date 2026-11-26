@@ -22,8 +22,8 @@ function App() {
     <div className="portfolio">
       <header className="header">
         <nav className="nav" aria-label="Main navigation">
-          <a className="brand" href="#home" aria-label="Vaibhav Tiwari portfolio home">
-            Vaibhav<span>.</span>
+          <a className="brand" href="#home" aria-label="yukti agrawal portfolio home">
+            yukti<span>.</span>
           </a>
           <div className="nav-links">
             <a href="#about">About</a>
@@ -39,7 +39,7 @@ function App() {
           <div className="hero-copy">
             <p className="eyebrow">MCA Student &amp; Software Developer</p>
             <h1>
-              Hi, I'm <span>Vaibhav Tiwari</span>
+              Hi, I'm <span>yukti agrawal</span>
             </h1>
             <p className="hero-description">
               I build clean, responsive and user-friendly websites using modern
@@ -66,7 +66,7 @@ function App() {
           </div>
           <div className="about-card">
             <p>
-              I am Vaibhav Tiwari, a passionate web developer and MCA student at GLA
+              I am yukti agrawal, a passionate web developer and MCA student at GLA
               University. I enjoy turning ideas into polished digital experiences
               and continuously improving my skills.
             </p>
@@ -126,16 +126,16 @@ function App() {
             <h2>Have a project in mind?</h2>
           </div>
           <div className="contact-details">
-            <a href="mailto:vaibhav.tiwari_mca26@gla.ac.in">
-              vaibhav.tiwari_mca26@gla.ac.in
+            <a href="mailto:yukti.agrawal_mca26@gla.ac.in">
+              yukti.agrawal_mca26@gla.ac.in
             </a>
-            <a href="tel:+919621937016">+91 9621937016</a>
+            <a href="tel:+919368606046">+91 9368606046</a>
           </div>
         </section>
       </main>
 
       <footer>
-        <p>© {new Date().getFullYear()} Vaibhav Tiwari. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} yukti agrawal. All rights reserved.</p>
       </footer>
     </div>
   );
